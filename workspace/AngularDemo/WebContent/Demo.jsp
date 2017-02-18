@@ -8,6 +8,7 @@
 <script src="lib/angular.min.js"></script>
 </head>
 <body>
+	<h1>AngularJS Demo</h1>
 	<script type="text/javascript">
 		var demoApp = angular.module("DemoApp", []);
 	</script>
