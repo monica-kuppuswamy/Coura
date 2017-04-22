@@ -1,0 +1,17 @@
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.md-whiteframe-10dp {
+    background: #d9d9d9;
+    height: 800px;
+}
+
+.panel-body {
+	background: #f2f2f2;
+    width: 450px;
+    height: 450px;
+}
+.panel-heading {
+    height: 40px;
+}

@@ -1,0 +1,42 @@
+.panel {
+  	width: 1400px;
+}
+
+.jumbotron {
+  	margin-bottom: 0;
+}
+
+.panel-body {
+    background: #f2f2f2;
+    width: 450px;
+    height: 380px;
+}
+       
+a {
+    width: 200px;
+}
+       
+.nav-tabs {
+    background-color: black;
+}
+       
+.tab-content {
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+}
+       
+.nav-tabs > li > a {
+    border: medium none;
+}
+       
+.nav-tabs > li > a:hover {
+    background-color: #303136 !important;
+    border: medium none;
+    border-radius: 0;
+    color: #fff;
+}
+       
+a:hover {
+    cursor: pointer;
+}

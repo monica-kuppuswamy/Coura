@@ -1,0 +1,56 @@
+.panel {
+  	width: 80%;
+  	height: relative;
+  	margin-top: 10px;
+  	margin-left: 15px;
+  	margin-right: 15px;
+  	margin-down: 10px;
+}
+
+.jumbotron {
+  	margin-bottom: 0;
+}
+    
+#div-left {
+	float: left;
+	border-radius: 5px;
+	height: 300px;
+	width: 500px;
+}
+
+.well {
+	height: relative;
+	bottom-margin: 0px;
+}
+
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+}
+
+ul.rating {
+    display: inline-block;
+}
+
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rating .filled {
+     color: #ff9900;
+}
+
+hr {
+	height: 10px !important;
+}
+
+textarea {
+	width: 800px;
+	height: 50px;
+}

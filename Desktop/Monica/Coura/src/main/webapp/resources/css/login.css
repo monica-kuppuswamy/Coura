@@ -1,0 +1,15 @@
+.md-whiteframe-10dp {
+     background: #d9d9d9;
+     margin: 40px;
+     height: 500px;
+}
+
+.panel-body {
+    background: #f2f2f2;
+    width: 305px;
+    height: 300px;
+}
+
+#submit-button {
+   	width: 275px;
+}
