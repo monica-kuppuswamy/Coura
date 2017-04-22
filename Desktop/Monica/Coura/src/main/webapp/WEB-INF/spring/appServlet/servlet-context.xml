@@ -29,7 +29,7 @@
 		<beans:property name="url"
 			value="jdbc:mysql://localhost:3306/Coura_DB" />
 		<beans:property name="username" value="root" />
-		<beans:property name="password" value="root" />
+		<beans:property name="password" value="root123" />
 	</beans:bean>
 	
 	<beans:bean id="hibernate4AnnotatedSessionFactory"
@@ -45,6 +45,8 @@
 				<beans:value>com.coura.model.CourseRating</beans:value>
 				<beans:value>com.coura.model.CourseReview</beans:value>
 				<beans:value>com.coura.model.StudentCourse</beans:value>
+				<beans:value>com.coura.model.InstructorRating</beans:value>
+				<beans:value>com.coura.model.InstructorReview</beans:value>											   
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -84,16 +86,32 @@
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 	
+	<beans:bean id="instructorRatingDao" class="com.coura.dao.InstructorRatingDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	
 	<beans:bean id="ratingService" class="com.coura.service.RatingServiceImpl">
 		<beans:property name="ratingDao" ref="ratingDao"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="instructorRatingService" class="com.coura.service.InstructorRatingServiceImpl">
+		<beans:property name="instructorRatingDao" ref="instructorRatingDao"></beans:property>
 	</beans:bean>
 	
 	<beans:bean id="reviewDao" class="com.coura.dao.ReviewDaoImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 	
+	<beans:bean id="instructorReviewDao" class="com.coura.dao.InstructorReviewDaoImpl">
+		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+	
 	<beans:bean id="reviewService" class="com.coura.service.ReviewServiceImpl">
 		<beans:property name="reviewDao" ref="reviewDao"></beans:property>
+	</beans:bean>
+	
+	<beans:bean id="instructorReviewService" class="com.coura.service.InstructorReviewServiceImpl">
+		<beans:property name="instructorReviewDao" ref="instructorReviewDao"></beans:property>
 	</beans:bean>
 	
 	<beans:bean id="courseDao" class="com.coura.dao.CourseDaoImpl">

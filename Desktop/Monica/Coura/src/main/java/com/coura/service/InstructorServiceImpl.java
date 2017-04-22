@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.coura.dao.InstructorDao;
-
+import com.coura.model.Course;
 import com.coura.model.CourseInstructorWrapper;
 import com.coura.model.Instructor;
 
@@ -33,5 +33,23 @@ public class InstructorServiceImpl implements InstructorService {
 	@Transactional
 	public List<Instructor> listAllInstructors() {
 		return this.instructorDao.listAllInstructors();
+	}
+	
+	@Override
+	@Transactional
+	public List<Instructor> getInstructorById(Integer instructorId) {
+		return this.instructorDao.getInstructorById(instructorId);
+	}
+	
+	@Override
+	@Transactional
+	public  Integer getIdForInstructor(String emailId) {
+		return this.instructorDao.getIdForInstructor(emailId);
+	}
+	
+	@Override
+	@Transactional
+	public List<Course> getCourseForInstructor(Integer instructorId) {
+		return this.instructorDao.getCourseForInstructor(instructorId);
 	}
 }

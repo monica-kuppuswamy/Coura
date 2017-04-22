@@ -83,6 +83,20 @@ public class CourseDaoImpl implements CourseDao {
 			query1.executeUpdate();
 			session.flush();
 			session.clear();
+			
+			// Delete from instructorrating table
+			Query query5 = session.createQuery("delete from InstructorRating where courseId = :courseId");
+			query5.setParameter("courseId", course.getId());
+			query5.executeUpdate();
+			session.flush();
+			session.clear();
+			
+			// Delete from coursereview table
+			Query query4 = session.createQuery("delete from CourseReview where courseId = :courseId");
+			query4.setParameter("courseId", course.getId());
+			query4.executeUpdate();
+			session.flush();
+			session.clear();			   
 				
 			// Delete from courseinstructor table
 			Query query2 = session.createQuery("delete from CourseInstructor where courseId = :courseId");

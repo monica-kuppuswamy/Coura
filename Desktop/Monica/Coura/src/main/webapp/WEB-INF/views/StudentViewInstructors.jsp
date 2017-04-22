@@ -13,8 +13,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
   	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	  <link rel="stylesheet" type="text/css" href="resources/css/StudentHomePage.css">
-  	  <script type="text/javascript" src="resources/js/StudentHome.js"></script>
+  	  <link rel="stylesheet" type="text/css" href="resources/css/StudentViewInstructors.css">
+  	  <script type="text/javascript" src="resources/js/StudentViewInstructors.js"></script>
    </head>
     
    <body data-ng-app="couraApplication">
@@ -24,12 +24,12 @@
     			<p>Course Recommender</p>
   			</div>
 		</div>
- 		<div data-ng-controller="CourseController" data-ng-init="listCourses()">
+ 		<div data-ng-controller="InstructorController" data-ng-init="listInstructors()">
    			<ul class="nav nav-tabs nav-justified">
       			<li></li>
-      			<li class="active"><a type="button" data-ng-click="listCourses()">Courses</a></li>
+      			<li><a href ="/app/studenthome">Courses</a></li>
       			<li></li>
-      			<li><a href ="/app/studentviewinstructors">Instructors</a></li>
+      			<li class="active"><a type="button" data-ng-click="listInstructors()">Instructors</a></li>
       			<li></li>
       			<li><a href ="/app/mycourses">My Courses</a></li>
       			<li></li>
@@ -44,22 +44,22 @@
                             		<div id="myDIV" class="dropdown-menu dropdown-menu-right" role="menu">
                                 		<form class="form-horizontal" role="form">
                                   			<div class="form-group">
+                                    			<label for="contain">First Name</label>
+                                    			<input class="form-control" type="text" data-ng-model="firstName" value="" />
+                                  			</div>
+                                  			<div class="form-group">
+                                    			<label for="contain">Last Number</label>
+                                    			<input class="form-control" type="text" data-ng-model="lastName" value="" />
+                                  			</div>
+                                  			<div class="form-group">
+                                    			<label for="contain">Research Interest</label>
+                                    			<input class="form-control" type="text" data-ng-model="researchInterest" value="" />
+                                  			</div>
+                                  			<div class="form-group">
                                     			<label for="contain">Course Name</label>
                                     			<input class="form-control" type="text" data-ng-model="courseName" value="" />
                                   			</div>
-                                  			<div class="form-group">
-                                    			<label for="contain">Course Number</label>
-                                    			<input class="form-control" type="text" data-ng-model="courseNumber" value="" />
-                                  			</div>
-                                  			<div class="form-group">
-                                    			<label for="contain">Area of Interest</label>
-                                    			<input class="form-control" type="text" data-ng-model="areaOfInterest" value="" />
-                                  			</div>
-                                  			<div class="form-group">
-                                    			<label for="contain">Instructor Name</label>
-                                    			<input class="form-control" type="text" data-ng-model="instructorName" value="" />
-                                  			</div>
-                                  			<button type="submit" class="btn btn-primary" data-ng-click="searchCourses()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                  			<button type="submit" class="btn btn-primary" data-ng-click="searchInstructors()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                 		</form>
                             		</div>
                         		</div>
@@ -72,15 +72,14 @@
    							<div class="container">
    								<div class="row">
       								<ul class="thumbnails list-unstyled">
-        								<li class="col-md-3" data-ng-repeat="course in coursesList">
-        									<a type="button" data-ng-click="getCourseDetails(course.courseNumber)">
+        								<li class="col-md-3" data-ng-repeat="instructor in instructorsList">
+        									<a type="button" data-ng-click="getInstructorDetails(instructor.emailId)">
           										<div class="thumbnail" style="padding: 0">
             										<div style="padding:5px">
-              											<img alt="courses" style="width: 100%" src="resources/images/course.jpg">
+              											<img alt="instructors" style="width: 100%" src="resources/images/instructor.jpg">
             										</div>
             										<div class="caption">
-              											<h6><b>{{course.courseName}}</b></h6>
-              											<p>{{course.courseNumber}}</p>
+              											<h5><b>{{instructor.firstName}} {{instructor.lastName}}</b></h5>
             										</div>
           										</div>
           									</a>

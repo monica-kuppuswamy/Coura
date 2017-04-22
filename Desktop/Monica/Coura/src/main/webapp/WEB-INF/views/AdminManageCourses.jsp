@@ -63,7 +63,7 @@
                    			  		<tr>
                     			  		<th>Course Name</th>
                      			  		<th>Course Number</th>
-                     			  		<th>Pre requisite</th>
+                     			  		<th>Prerequisite</th>
                       			  		<th>Edit</th>
                        			  		<th>Delete</th>
                        		  		</tr>
@@ -145,20 +145,20 @@
   							<br>
   						
     						<label>Course Number:</label>
-  							<input type="text" class="form-control" name="number" data-ng-model="number" placeholder="Course Number" required/>
+  							<input type="text" class="form-control" name="courseNumber" data-ng-model="courseNumber" placeholder="Course Number" required/>
   							<span style="color:red" data-ng-show="addInstructorForm.number.$touched && addInstructorForm.number.$invalid">This is a required field</span>
   							<br>
   						
-  							<label>Pre requisite:</label>
+  							<label>Prerequisite:</label>
   							<input type="text" class="form-control" name="prerequisite" data-ng-model="prerequisite" placeholder="Enter Prerequisite" required/>
   							<span style="color:red" data-ng-show="addInstructorForm.prerequisite.$touched && addInstructorForm.prerequisite.$invalid">This is a required field</span>
   							<br>
   				
   							<label>Course Description:</label>
-  							<textarea class="form-control" name="courseDescription" data-ng-model="courseDescription" placeholder="Enter Course Description" required><</textarea>
+  							<textarea class="form-control" name="courseDescription" data-ng-model="courseDescription" placeholder="Enter Course Description" required></textarea>
   							<span style="color:red" data-ng-show="addInstructorForm.courseDescription.$touched && addInstructorForm.courseDescription.$invalid">This is a required field</span>
   							<br>
-  							<button type="submit" class="btn btn-primary" data-ng-click="signup()">Submit</button>
+  							<button type="submit" class="btn btn-primary" data-ng-click="addCourse()">Submit</button>
       					</form>
       				</div>
     			</div>

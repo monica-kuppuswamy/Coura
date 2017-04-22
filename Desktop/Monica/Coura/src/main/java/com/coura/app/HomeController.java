@@ -114,12 +114,28 @@ public class HomeController {
 	
 	@RequestMapping(value = "/studenthome", method = RequestMethod.GET)
 	public String studentHome(Model model, HttpSession httpSession) {
-		
 		if (httpSession.getAttribute("userId") != null) {
 			String user = httpSession.getAttribute("userId").toString();
 			if(!(user.equals("admin@uncc.edu"))) {
 				model.addAttribute("message", "Student Home");
 				return "StudentHomePage";
+			} else {
+				model.addAttribute("message", "Log In");
+				return "LoginPage";
+			}
+		} else {
+			model.addAttribute("message", "Log In");
+			return "LoginPage";
+		}
+	}
+	
+	@RequestMapping(value = "/studentviewinstructors", method = RequestMethod.GET)
+	public String studentViewInstructors(Model model, HttpSession httpSession) {
+		if (httpSession.getAttribute("userId") != null) {
+			String user = httpSession.getAttribute("userId").toString();												   
+			if(!(user.equals("admin@uncc.edu"))) {							 
+			model.addAttribute("message", "Student View Instructors");
+			return "StudentViewInstructors";
 			} else {
 				model.addAttribute("message", "Log In");
 				return "LoginPage";
@@ -154,6 +170,24 @@ public class HomeController {
 			if(!(user.equals("admin@uncc.edu"))) {
 				model.addAttribute("message", "Student Home");
 				return "MyCourses";
+			} else {
+				model.addAttribute("message", "Log In");
+				return "LoginPage";
+			}
+		} else {
+			model.addAttribute("message", "Log In");
+			return "LoginPage";
+		}
+	}
+	
+	@RequestMapping(value = "/instructordetails", method = RequestMethod.GET)
+	public String instructorDetailsPage(Model model, HttpSession httpSession) {
+															  
+		if (httpSession.getAttribute("userId") != null) {
+			String user = httpSession.getAttribute("userId").toString();												   
+			if(!(user.equals("admin@uncc.edu"))) {							 
+			model.addAttribute("message", "Instructor Details");								
+			return "InstructorDetails";
 			} else {
 				model.addAttribute("message", "Log In");
 				return "LoginPage";

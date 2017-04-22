@@ -36,4 +36,10 @@ app.controller('InstructorController', ['$scope', '$http', '$cookies', function 
  			}
  		}); 
 	}
+	
+	$scope.logout = function () {
+		$http.get("/app/loginservice/logout").then(function (response) {
+			window.location.href = "/app/login";
+		});
+	}
 }]);

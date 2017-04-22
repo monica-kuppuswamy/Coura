@@ -30,7 +30,7 @@
       			<li></li>
       			<li><a href="/app/studenthome">Courses</a></li>
       			<li></li>
-      			<li><a href ="/app/home">Instructors</a></li>
+      			<li><a href ="/app/studentviewinstructors">Instructors</a></li>
       			<li></li>
       			<li class="active"><a type="button" data-ng-click="listMyCourses()">My Courses</a></li>
       			<li></li>
