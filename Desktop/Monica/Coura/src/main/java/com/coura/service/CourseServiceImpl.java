@@ -88,4 +88,10 @@ public class CourseServiceImpl implements CourseService {
 	public List<Course> searchCourses(String courseNumber, String courseName, String areaOfInterest, String instructorName) {
 		return this.courseDao.searchCourses(courseNumber, courseName, areaOfInterest, instructorName);
 	}
+	@Override
+	@Transactional
+	public List<Course> listMostRecentlySearchedCourses() {
+		return this.courseDao.listMostRecentlySearchedCourses();
+	}
+
 }

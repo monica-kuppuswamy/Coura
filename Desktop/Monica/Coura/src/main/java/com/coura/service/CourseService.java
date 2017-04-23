@@ -17,4 +17,5 @@ public interface CourseService {
 	public Integer getIdForCourse(String courseNumber);
 	public List<Instructor> getInstructorsForCourse(Integer courseId);
 	public List<Course> searchCourses(String courseNumber, String courseName, String areaOfInterest, String instructorName);
+	public List<Course> listMostRecentlySearchedCourses();
 }

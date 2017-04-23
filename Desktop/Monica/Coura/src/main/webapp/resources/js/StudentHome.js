@@ -42,4 +42,14 @@ app.controller('CourseController', ['$scope', '$http', '$cookies', function ($sc
 			window.location.href = "/app/login";
 		});
 	}
+	
+	
+	$scope.listMostRecentSearchedCourses = function() {
+		$http.get("/app/courseservice/getMostRecentlySearchedCourses")
+			.then(function(response){
+			$scope.coursesList=response.data;
+		});
+	}
+
 }]);
+

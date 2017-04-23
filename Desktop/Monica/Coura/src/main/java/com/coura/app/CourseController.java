@@ -114,4 +114,13 @@ public class CourseController {
 		return new ResponseEntity<List<Course>>(course, HttpStatus.OK);
 	}
 	
+@RequestMapping(
+	value="getMostRecentlySearchedCourses",
+	method=RequestMethod.GET,
+	produces=MediaType.APPLICATION_JSON_VALUE)
+public @ResponseBody ResponseEntity<List<Course>> listMostRecentlySearchedCourses(){
+List<Course> course=this.courseService.listMostRecentlySearchedCourses();
+return new ResponseEntity<List<Course>>(course,HttpStatus.OK);
+}
+	
 }

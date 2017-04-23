@@ -2,6 +2,7 @@ package com.coura.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -18,7 +19,9 @@ import com.coura.model.Course;
 import com.coura.model.CourseInstructor;
 import com.coura.model.Instructor;
 import com.coura.model.Users;
-
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 @Repository
 @Transactional
 public class CourseDaoImpl implements CourseDao {
@@ -113,7 +116,7 @@ public class CourseDaoImpl implements CourseDao {
 			session.clear();
 		}
 	}
-	
+	List<Course> mrsc=new ArrayList<Course>();
 	@SuppressWarnings("unchecked")
 	public List<Course> getCourseById(Integer courseId) {
 		Session session = this.sessionFactory.getCurrentSession();
@@ -121,6 +124,7 @@ public class CourseDaoImpl implements CourseDao {
 				"c.description as description from Course c where c.id = :courseId").setResultTransformer(Transformers.aliasToBean(Course.class));
 		query.setParameter("courseId", courseId);
 		List<Course> course = query.list();
+		mrsc.addAll(course);
 		return course;
 	}
 	
@@ -312,5 +316,14 @@ public class CourseDaoImpl implements CourseDao {
 		}
 		List<Course> course = new ArrayList<Course>();
 		return course;
+		
+	}
+	@Override
+	public List<Course> listMostRecentlySearchedCourses() {
+		if(mrsc.size()>4)
+			mrsc.subList(0,mrsc.size()-4).clear();
+		Set<Course> set=new HashSet(mrsc);
+		List<Course> x=new ArrayList<Course>(set);
+		return x;
 	}
 }
