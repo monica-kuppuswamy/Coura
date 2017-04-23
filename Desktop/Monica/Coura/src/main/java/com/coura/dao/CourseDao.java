@@ -7,6 +7,8 @@ import com.coura.model.Course;
 public interface CourseDao {
 	public Course findCourseByNumber(Integer courseId);
 	public boolean isExistingCourse(Integer courseId);
+	public Course findCourseByNumber(String courseNumber);
+	public boolean isExistingCourse(String courseNumber);
 	public void saveCourses(Course course);
 	public void updateCourse(Course course);
 	public List<Course> listAllCourses();

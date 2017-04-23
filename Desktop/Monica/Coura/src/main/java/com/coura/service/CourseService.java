@@ -9,8 +9,10 @@ public interface CourseService {
 	
 	public Course findCourseByNumber(Integer courseId);
 	public boolean isExistingCourse(Integer courseId);
+	public Course findCourseByNumber(String courseNumber);
+	public boolean isExistingCourse(String courseNumber);
 	public boolean saveCourses(Course course);
-	public void updateCourse(Course course);
+	public boolean updateCourse(Course course);
 	public List<Course> listAllCourses();
 	public void deleteCourse(Integer courseId);
 	public List<Course> getCourseById(Integer courseId);

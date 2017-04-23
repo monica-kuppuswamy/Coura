@@ -75,6 +75,45 @@ app.controller('InstructorController', ['$scope', '$http', '$filter', '$cookies'
 		});
 	}
 	
+	$scope.editInstructor = function (id, firstName, lastName, emailId, researchInterest) {
+		
+		instructorId = id;
+		$scope.firstName = firstName;
+		$scope.lastName = lastName;
+		$scope.emailId = emailId;
+		$scope.researchInterest = researchInterest;
+	}
+	
+	$scope.confirmEdition = function() {
+		
+		// Hide failure or success message
+       	$scope.error = false;
+       	$scope.success = false;
+            	
+    	var instructorDetails = {
+    		id: instructorId,
+    		firstName: $scope.firstName,
+    		lastName: $scope.lastName,
+    		emailId: $scope.emailId,
+    		researchInterest: $scope.researchInterest
+    	};
+    	
+    	var res = $http.post('/app/instructorservice/updateinstructor', instructorDetails);
+    	res.success(function(data, status, headers, config) {
+    		if (data.includes("successfully updated")) {
+    			$scope.success = true;
+    			$scope.successMessage = data;
+    		} else {
+    			$scope.error = true;
+    			$scope.errorMessage = data;
+    		}
+    	});
+        res.error(function(data, status, headers, config) {
+        	$scope.error = true;
+        	$scope.errorMessage = "All required fields should be filled as per the criteria";
+        });
+	}
+	
 	$scope.logout = function () {
 		$http.get("/app/loginservice/logout").then(function (response) {
 			window.location.href = "/app/login";

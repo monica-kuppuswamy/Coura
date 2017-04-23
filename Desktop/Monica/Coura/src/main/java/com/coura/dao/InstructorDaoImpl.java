@@ -38,6 +38,37 @@ public class InstructorDaoImpl implements InstructorDao {
 		return true;
 	}
 	
+	@SuppressWarnings("unchecked")
+	public Instructor findInstructorByEmailId(String emailId) {
+		Integer instructorId = getIdForInstructor(emailId);
+		if(instructorId == null)
+			return null;
+		Session session = this.sessionFactory.getCurrentSession();
+		Instructor instructor = (Instructor) session.get(Instructor.class, instructorId);
+		return instructor;
+	}
+	
+	public boolean isExistingInstructor(String emailId) {
+		Instructor i = findInstructorByEmailId(emailId);
+		if (i != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public void updateInstructor(Instructor instructor) {
+		Session session = this.sessionFactory.getCurrentSession();
+		Query query = session.createQuery("update Instructor set firstName = :firstName, lastName = :lastName," + 
+				" emailId = :emailId, researchInterest = :researchInterest where id = :id");
+		query.setParameter("firstName", instructor.getFirstName());
+		query.setParameter("lastName", instructor.getLastName());
+		query.setParameter("emailId", instructor.getEmailId());
+		query.setParameter("researchInterest", instructor.getResearchInterest());
+		query.setParameter("id", instructor.getId());
+		query.executeUpdate();
+	}
+	
 	public void deleteInstructor(Integer instructorId) {
 		Session session = this.sessionFactory.getCurrentSession();
 		
@@ -104,13 +135,15 @@ public class InstructorDaoImpl implements InstructorDao {
 		Query query = session.createQuery("select id as id from Instructor where emailId like :emailId").setResultTransformer(Transformers.aliasToBean(Instructor.class));
 		query.setParameter("emailId", emailId+"%");
 		List<Instructor> instructor = query.list();
+		if(instructor.isEmpty())
+			return null;
 		return instructor.get(0).getId();
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<Course> getCourseForInstructor(Integer instructorId) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Query query = session.createQuery("select c.courseNumber as courseNumber, c.courseName as courseName, c.prerequisite as prerequisite, c.description as description from Course c, CourseInstructor ci" + 
+		Query query = session.createQuery("select c.id as id, c.courseNumber as courseNumber, c.courseName as courseName, c.prerequisite as prerequisite, c.description as description from Course c, CourseInstructor ci" + 
 				" where c.id = ci.courseId and ci.instructorId = :instructorId").setResultTransformer(Transformers.aliasToBean(Course.class));
 		query.setParameter("instructorId", instructorId);
 		List<Course> course = query.list();

@@ -25,6 +25,29 @@ public class InstructorServiceImpl implements InstructorService {
 	
 	@Override
 	@Transactional
+	public Instructor findInstructorByEmailId(String emailId) {
+		return this.instructorDao.findInstructorByEmailId(emailId);
+	}
+	
+	@Override
+	@Transactional
+	public boolean isExistingInstructor(String emailId) {
+		return this.instructorDao.isExistingInstructor(emailId);
+	}
+	
+	@Override
+	@Transactional
+	public boolean updateInstructor(Instructor instructor) {
+		if (this.isExistingInstructor(instructor.getEmailId())) {
+			return false;
+		} else {
+			this.instructorDao.updateInstructor(instructor);
+			return true;
+		}
+	}
+	
+	@Override
+	@Transactional
 	public void deleteInstructor(Integer instructorId) {
 		this.instructorDao.deleteInstructor(instructorId);
 	}

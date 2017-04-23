@@ -28,7 +28,7 @@ app.controller('CourseController', ['$scope', '$http', '$filter', '$cookies', fu
  				var res = $http.post('/app/courseservice/savecourse', course);
  		    	res.success(function(data, status, headers, config) {
  		    		alert(data);
- 		    		if (data.includes("Course Added Successfully")) {
+ 		    		if (data.includes("successfully updated.")) {
  		    			$scope.success = true;
  		    			$scope.successMessage = data;
  		    		} else {
@@ -58,6 +58,45 @@ app.controller('CourseController', ['$scope', '$http', '$filter', '$cookies', fu
 			$scope.listCourses();
 		}).error(function(data, status, headers, config) {
 		});
+	}
+	
+	$scope.editCourse = function (id, courseNumber, courseName, prerequisite, description) {
+		
+		courseId = id;
+		$scope.courseNumber = courseNumber;
+		$scope.courseName = courseName;
+		$scope.prerequisite = prerequisite;
+		$scope.description = description;
+	}
+	
+	$scope.confirmEdition = function() {
+		
+		// Hide failure or success message
+       	$scope.error = false;
+       	$scope.success = false;
+            	
+    	var courseDetails = {
+    		id: courseId,
+    		courseNumber: $scope.courseNumber,
+    		courseName: $scope.courseName,
+    		prerequisite: $scope.prerequisite,
+    		description: $scope.description
+    	};
+    	
+    	var res = $http.post('/app/courseservice/updatecourse', courseDetails);
+    	res.success(function(data, status, headers, config) {
+    		if (data.includes("successfully updated")) {
+    			$scope.success = true;
+    			$scope.successMessage = data;
+    		} else {
+    			$scope.error = true;
+    			$scope.errorMessage = data;
+    		}
+    	});
+        res.error(function(data, status, headers, config) {
+        	$scope.error = true;
+        	$scope.errorMessage = "All required fields should be filled as per the criteria";
+        });
 	}
 	
 	$scope.logout = function () {

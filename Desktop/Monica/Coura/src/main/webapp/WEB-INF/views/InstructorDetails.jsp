@@ -48,8 +48,8 @@
       							<li>Quality of Teaching: 
       							<ul class="rating">
             					  	<li data-ng-repeat="n in [].constructor(5) track by $index">
-                				  		<span data-ng-show="4 > $index" class="filled">&#9733;</span>
-                						<span data-ng-show="4 <= $index">&#9733;</span>
+                				  		<span data-ng-show="getQualityOfTeaching(course.id) > $index" class="filled">&#9733;</span>
+                						<span data-ng-show="getQualityOfTeaching(course.id) <= $index">&#9733;</span>
             						</li>
         						</ul>
         						<br>
@@ -57,8 +57,8 @@
       							<li>Grading Style: 
       							<ul class="rating">
             					  	<li data-ng-repeat="n in [].constructor(5) track by $index">
-                				  		<span data-ng-show="4 > $index" class="filled">&#9733;</span>
-                						<span data-ng-show="4 <= $index">&#9733;</span>
+                				  		<span data-ng-show="getGradingStyle(course.id) > $index" class="filled">&#9733;</span>
+                						<span data-ng-show="getGradingStyle(course.id) <= $index">&#9733;</span>
             						</li>
         						</ul>
         						<br>
@@ -66,8 +66,8 @@
       							<li>Leniency: 
       							<ul class="rating">
             					  	<li data-ng-repeat="n in [].constructor(5) track by $index">
-                				  		<span data-ng-show="4 > $index" class="filled">&#9733;</span>
-                						<span data-ng-show="4 <= $index">&#9733;</span>
+                				  		<span data-ng-show="getLeniency(course.id) > $index" class="filled">&#9733;</span>
+                						<span data-ng-show="getLeniency(course.id) <= $index">&#9733;</span>
             						</li>
         						</ul>
         						<br>

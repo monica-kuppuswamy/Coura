@@ -32,8 +32,20 @@ public class CourseServiceImpl implements CourseService {
 	
 	@Override
 	@Transactional
+	public Course findCourseByNumber(String courseNumber) {
+		return this.courseDao.findCourseByNumber(courseNumber);
+	}
+	
+	@Override
+	@Transactional
 	public boolean isExistingCourse(Integer courseId) {
 		return this.courseDao.isExistingCourse(courseId);
+	}
+	
+	@Override
+	@Transactional
+	public boolean isExistingCourse(String courseNumber) {
+		return this.courseDao.isExistingCourse(courseNumber);
 	}
 	
 	@Override
@@ -49,8 +61,13 @@ public class CourseServiceImpl implements CourseService {
 	
 	@Override
 	@Transactional
-	public void updateCourse(Course course) {
-		this.courseDao.updateCourse(course);
+	public boolean updateCourse(Course course) {
+		if (this.isExistingCourse(course.getCourseNumber())) {
+			return false;
+		} else {
+			this.courseDao.updateCourse(course);
+			return true;
+		}
 	}
 	
 	@Override

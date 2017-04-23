@@ -49,6 +49,24 @@ public class CourseDaoImpl implements CourseDao {
 		}
 	}
 	
+	public Course findCourseByNumber(String courseNumber) {
+		Integer courseId = getIdForCourse(courseNumber);
+		if(courseId == null)
+			return null;
+		Session session = this.sessionFactory.getCurrentSession();
+		Course course = (Course) session.get(Course.class, courseId);
+		return course;
+	}
+	
+	public boolean isExistingCourse(String courseNumber) {
+		Course c = findCourseByNumber(courseNumber);
+		if (c != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public void saveCourses(Course course) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(course);
@@ -134,6 +152,8 @@ public class CourseDaoImpl implements CourseDao {
 		Query query = session.createQuery("select c.id as id from Course c where c.courseNumber = :courseNumber").setResultTransformer(Transformers.aliasToBean(Course.class));
 		query.setParameter("courseNumber", courseNumber);
 		List<Course> course = query.list();
+		if(course.isEmpty())
+			return null;
 		return course.get(0).getId();
 	}
 	

@@ -29,7 +29,7 @@
 		<beans:property name="url"
 			value="jdbc:mysql://localhost:3306/coura_testdb" />
 		<beans:property name="username" value="root" />
-		<beans:property name="password" value="root" />
+		<beans:property name="password" value="root123" />
 	</beans:bean>
 	
 	<beans:bean id="hibernate4AnnotatedSessionFactory"

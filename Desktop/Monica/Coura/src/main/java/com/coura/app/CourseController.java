@@ -53,12 +53,19 @@ public class CourseController {
 	
 	@RequestMapping(
 			value = "/updatecourse",
-			method = RequestMethod.PUT,
+			method = RequestMethod.POST,
 			consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.TEXT_PLAIN_VALUE
 			)
-	public @ResponseBody void updateCourse(@RequestBody Course course) {
-		this.courseService.updateCourse(course);
+	public @ResponseBody String updateCourse(@RequestBody Course course) {
+		boolean retVal = this.courseService.updateCourse(course);
+		String message = null;
+		if (retVal) { 
+			message = "Course with course number " + course.getCourseNumber() + " is successfully updated.";
+		} else {
+			message = "Course with course number " + course.getCourseNumber() + " already exists.";
+		}
+		return message;
 	}
 	
 	@RequestMapping(

@@ -8,6 +8,9 @@ import com.coura.model.Instructor;
 
 public interface InstructorService {
 	public boolean addInstructor(CourseInstructorWrapper wrapper);
+	public Instructor findInstructorByEmailId(String emailId);
+	public boolean isExistingInstructor(String emailId);
+	public boolean updateInstructor(Instructor instructor);
 	public void deleteInstructor(Integer instructorId);
 	public List<Instructor> listAllInstructors();
 	public List<Instructor> getInstructorById(Integer instructorId);

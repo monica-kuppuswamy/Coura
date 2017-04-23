@@ -50,6 +50,23 @@ public class InstructorController {
 	}
 	
 	@RequestMapping(
+			value = "/updateinstructor",
+			method = RequestMethod.POST,
+			consumes = MediaType.APPLICATION_JSON_VALUE,
+			produces = MediaType.TEXT_PLAIN_VALUE
+			)
+	public @ResponseBody String updateInstructor(@RequestBody Instructor instructor) {
+		boolean retVal = this.instructorService.updateInstructor(instructor);
+		String message = null;
+		if (retVal) { 
+			message = "Instructor with email ID " + instructor.getEmailId() + " is successfully updated.";
+		} else {
+			message = "Instructor with email ID " + instructor.getEmailId() + " already exists.";
+		}
+		return message;
+	}
+	
+	@RequestMapping(
 			value = "/deleteinstructor/{instructorId}",
 			method = RequestMethod.DELETE
 			)

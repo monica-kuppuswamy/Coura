@@ -1,6 +1,6 @@
 var app = angular.module('couraApplication', ['ngMaterial', , 'ngCookies'])
 .service('sharedProperties', function () {
-    var courseId = 1;
+    var courseId;
 
     return {
         getCourseId: function () {
@@ -17,6 +17,9 @@ app.config(function($mdThemingProvider) {
 	    .primaryPalette('red');
 })
 app.controller('InstructorDisplayController', ['$scope', '$http', '$cookies', 'sharedProperties', function ($scope, $http, $cookies, sharedProperties) {
+	
+	var OverallRatings;
+	
 	$scope.listInstructorDetails = function () {
 		$scope.Previous = "<< Back"
 		var queryString = window.location.search.split('=');
@@ -25,16 +28,79 @@ app.controller('InstructorDisplayController', ['$scope', '$http', '$cookies', 's
 		$http.get("/app/instructorservice/getinstructor/" + instructorId)
  		.then(function (response){
  			$scope.instructor = response.data;
- 			$http.get("/app/instructorservice/getcourseforinstructor/" + instructorId)
+ 			$http.get("/app/instructorratingservice/getrating/" + instructorId)
  	 		.then(function (response){
- 	 			$scope.courseList = response.data;
- 	 			$http.get("/app/instructorratingservice/getrating/" + instructorId)
+ 	 			OverallRatings = response.data;
+ 	 			$http.get("/app/instructorservice/getcourseforinstructor/" + instructorId)
  		 		.then(function (response){
- 		 			var overallRatings = response.data;
+ 		 			$scope.courseList = response.data;
  		 			$scope.getReviews();
  		 		});
  	 		}); 
  		});
+	}
+	
+	$scope.getQualityOfTeaching = function(cId) {
+		
+		var tq = 0;
+		var qualityOfTeaching;
+		var length = 0;
+		
+		for(var i = 0; i < OverallRatings.length; i++) {
+			if(cId == OverallRatings[i].courseId) {
+				tq += OverallRatings[i].qualityOfTeachingRating;
+				length++;
+			}
+		}
+		if (tq != 0 ) {
+			qualityOfTeaching = Math.round(tq/length);
+		} else {
+			qualityOfTeaching = 0;
+		}
+		
+		return qualityOfTeaching;
+	}
+	
+	$scope.getGradingStyle = function(cId) {
+		
+		var tg = 0;
+		var gradingStyle;
+		var length = 0;
+		
+		for(var i = 0; i < OverallRatings.length; i++) {
+			if(cId == OverallRatings[i].courseId) {
+				tg += OverallRatings[i].gradingStyleRating;
+				length++;
+			}
+		}
+		if (tg != 0 ) {
+			gradingStyle = Math.round(tg/length);
+		} else {
+			gradingStyle = 0;
+		}
+		
+		return gradingStyle;
+	}
+	
+	$scope.getLeniency = function(cId) {
+		
+		var tl = 0;
+		var leniency;
+		var length = 0;
+		
+		for(var i = 0; i < OverallRatings.length; i++) {
+			if(cId == OverallRatings[i].courseId) {
+				tl += OverallRatings[i].leniencyRating;
+				length++;
+			}
+		}
+		if (tl != 0 ) {
+			leniency = Math.round(tl/length);
+		} else {
+			leniency = 0;
+		}
+		
+		return leniency;
 	}
 	
 	$scope.getReviews = function () {

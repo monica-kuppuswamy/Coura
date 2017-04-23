@@ -73,7 +73,7 @@
     						     		<td>{{course.courseName}}</td>
     						     		<td>{{course.courseNumber}}</td>
     						     		<td>{{course.prerequisite}}</td>
-    						     		<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+    						     		<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" data-ng-click="editCourse(course.id, course.courseNumber, course.courseName, course.prerequisite, course.description)"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
     						     		<td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" data-ng-click="deleteCourse(course.id)"><span class="glyphicon glyphicon-trash"></span></button></p></td>
     					     		</tr>
     				     		</tbody>
@@ -98,20 +98,20 @@
                  		</div>
                  		<div class="modal-body">
                      		<div class="form-group">
-                         		<input class="form-control " type="text" placeholder="Course Name">
+                         		<input class="form-control " type="text" data-ng-model="courseNumber" placeholder="Course Number">
                      		</div>
                      		<div class="form-group">
-                         		<input class="form-control " type="text" placeholder="Instructor Names">
+                         		<input class="form-control " type="text" data-ng-model="courseName" placeholder="Course Name">
                      		</div> 
                      		<div class="form-group">
-                         		<input class="form-control" type="text" placeholder="Course Description">
+                         		<input class="form-control" type="text" data-ng-model="prerequisite" placeholder="Prerequisite">
                      		</div>
                      		<div class="form-group">
-                         		<input class="form-control" type="text" placeholder="Semesters">
+                         		<input class="form-control" type="text" data-ng-model="description" placeholder="Desription">
                      		</div>
                  		</div>
                  		<div class="modal-footer ">
-                     		<button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+                     		<button type="button" class="btn btn-warning btn-lg" style="width: 100%;" data-dismiss="modal" data-ng-click="confirmEdition()"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
                  		</div>
             		</div>
        			</div>
