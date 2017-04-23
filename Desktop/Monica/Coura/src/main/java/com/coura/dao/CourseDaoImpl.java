@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,11 +21,12 @@ import com.coura.model.CourseInstructor;
 import com.coura.model.Instructor;
 import com.coura.model.Users;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
 @Repository
 @Transactional
 public class CourseDaoImpl implements CourseDao {
+	
+	Set<Course> mrsc=new HashSet<Course>();
 	
 	private static final Logger logger = LoggerFactory.getLogger(CourseDaoImpl.class);
 
@@ -134,7 +136,7 @@ public class CourseDaoImpl implements CourseDao {
 			session.clear();
 		}
 	}
-	List<Course> mrsc=new ArrayList<Course>();
+	
 	@SuppressWarnings("unchecked")
 	public List<Course> getCourseById(Integer courseId) {
 		Session session = this.sessionFactory.getCurrentSession();
@@ -142,7 +144,8 @@ public class CourseDaoImpl implements CourseDao {
 				"c.description as description from Course c where c.id = :courseId").setResultTransformer(Transformers.aliasToBean(Course.class));
 		query.setParameter("courseId", courseId);
 		List<Course> course = query.list();
-		mrsc.addAll(course);
+		if(!mrsc.contains(course))
+		mrsc.add(course.get(0));
 		return course;
 	}
 	
@@ -340,10 +343,46 @@ public class CourseDaoImpl implements CourseDao {
 	}
 	@Override
 	public List<Course> listMostRecentlySearchedCourses() {
-		if(mrsc.size()>4)
-			mrsc.subList(0,mrsc.size()-4).clear();
-		Set<Course> set=new HashSet(mrsc);
+		
+		Set<Course> set=new HashSet<Course>(mrsc);
 		List<Course> x=new ArrayList<Course>(set);
+		if(x.size()>4)
+			x.subList(0,x.size()-4).clear();
 		return x;
 	}
+
+	@Override
+	public List<Instructor> listAllInstructors() {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		SQLQuery query = session.createSQLQuery("select * from instructors");
+		query.addEntity(Instructor.class);
+		List<Instructor> instuctorList = query.list();
+		return instuctorList;
+	}
+
+	@Override
+	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest) {
+		
+		if (firstName.equalsIgnoreCase("undefined")) {
+			lastName = " ";
+		}
+		if (lastName.equalsIgnoreCase("undefined")) {
+			lastName = " ";
+		}
+		if (areaOfInterest.equalsIgnoreCase("undefined")) {
+			areaOfInterest = " ";
+		}
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		SQLQuery query = session.createSQLQuery("select * from instructors where firstname like :fname and lastname like :lname and research_interest like :researchinterest");
+		query.addEntity(Instructor.class);
+		query.setParameter("fname", firstName + "%");
+		query.setParameter("lname", lastName.trim() + "%");
+		query.setParameter("researchinterest", areaOfInterest.trim() + "%");
+		List<Instructor> instuctorList = query.list();
+		System.out.println("-----"+instuctorList.size());
+		return instuctorList;
+	}
+
 }

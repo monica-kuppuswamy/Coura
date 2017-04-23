@@ -20,4 +20,6 @@ public interface CourseService {
 	public List<Instructor> getInstructorsForCourse(Integer courseId);
 	public List<Course> searchCourses(String courseNumber, String courseName, String areaOfInterest, String instructorName);
 	public List<Course> listMostRecentlySearchedCourses();
+	public List<Instructor> listAllInstructors();
+	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest);
 }

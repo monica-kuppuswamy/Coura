@@ -130,4 +130,13 @@ List<Course> course=this.courseService.listMostRecentlySearchedCourses();
 return new ResponseEntity<List<Course>>(course,HttpStatus.OK);
 }
 	
+
+@RequestMapping(
+		value = "/searchInstructors", 
+		method = RequestMethod.GET,
+		produces = MediaType.APPLICATION_JSON_VALUE)
+public @ResponseBody ResponseEntity<List<Instructor>> searchInstructors(@RequestParam(value = "firstName", required = false) String firstName, @RequestParam(value = "lastName", required = false) String lastName, @RequestParam(value = "areaOfInterest", required = false) String areaOfInterest) {
+	List<Instructor> instructor = this.courseService.searchInstructors(firstName, lastName, areaOfInterest);
+	return new ResponseEntity<List<Instructor>>(instructor, HttpStatus.OK);
+}
 }
