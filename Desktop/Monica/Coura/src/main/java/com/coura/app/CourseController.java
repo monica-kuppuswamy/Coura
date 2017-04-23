@@ -120,6 +120,7 @@ public class CourseController {
 	produces=MediaType.APPLICATION_JSON_VALUE)
 public @ResponseBody ResponseEntity<List<Course>> listMostRecentlySearchedCourses(){
 List<Course> course=this.courseService.listMostRecentlySearchedCourses();
+System.out.println(course);
 return new ResponseEntity<List<Course>>(course,HttpStatus.OK);
 }
 	

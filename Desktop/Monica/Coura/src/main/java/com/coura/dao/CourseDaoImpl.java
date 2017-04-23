@@ -20,11 +20,12 @@ import com.coura.model.CourseInstructor;
 import com.coura.model.Instructor;
 import com.coura.model.Users;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
 @Repository
 @Transactional
 public class CourseDaoImpl implements CourseDao {
+	
+	Set<Course> mrsc=new HashSet<Course>();
 	
 	private static final Logger logger = LoggerFactory.getLogger(CourseDaoImpl.class);
 
@@ -116,7 +117,7 @@ public class CourseDaoImpl implements CourseDao {
 			session.clear();
 		}
 	}
-	List<Course> mrsc=new ArrayList<Course>();
+	
 	@SuppressWarnings("unchecked")
 	public List<Course> getCourseById(Integer courseId) {
 		Session session = this.sessionFactory.getCurrentSession();
@@ -124,7 +125,8 @@ public class CourseDaoImpl implements CourseDao {
 				"c.description as description from Course c where c.id = :courseId").setResultTransformer(Transformers.aliasToBean(Course.class));
 		query.setParameter("courseId", courseId);
 		List<Course> course = query.list();
-		mrsc.addAll(course);
+		if(!mrsc.contains(course))
+		mrsc.add(course.get(0));
 		return course;
 	}
 	
@@ -320,10 +322,11 @@ public class CourseDaoImpl implements CourseDao {
 	}
 	@Override
 	public List<Course> listMostRecentlySearchedCourses() {
-		if(mrsc.size()>4)
-			mrsc.subList(0,mrsc.size()-4).clear();
-		Set<Course> set=new HashSet(mrsc);
+		
+		Set<Course> set=new HashSet<Course>(mrsc);
 		List<Course> x=new ArrayList<Course>(set);
+		if(x.size()>4)
+			x.subList(0,x.size()-4).clear();
 		return x;
 	}
 }
