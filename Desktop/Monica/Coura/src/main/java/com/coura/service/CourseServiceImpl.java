@@ -94,4 +94,18 @@ public class CourseServiceImpl implements CourseService {
 		return this.courseDao.listMostRecentlySearchedCourses();
 	}
 
+	@Override
+	@Transactional
+	public List<Instructor> listAllInstructors() {
+		// TODO Auto-generated method stub
+		return this.courseDao.listAllInstructors();
+	}
+
+	@Override
+	@Transactional
+	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest) {
+		// TODO Auto-generated method stub
+		return this.courseDao.searchInstructors(firstName, lastName, areaOfInterest);
+	}
+
 }

@@ -21,10 +21,10 @@ app.controller('InstructorController', ['$scope', '$http', '$cookies', function 
 		$scope.error = false;
 		var firstName = $scope.firstName;
 		var lastName = $scope.lastName;
-		var researchInterest = $scope.researchInterest;
-		var courseName = $scope.courseName;
+		var areaOfInterest = $scope.areaOfInterest;
 		
-		$http.get("/app/instructorservice/searchinstructors?firstName=" + firstName + "&lastName=" + lastName + "&researchInterest=" + researchInterest + "&courseName=" + courseName)
+		
+		$http.get("/app/courseservice/searchInstructors?firstName=" + firstName + "&lastName=" + lastName + "&areaOfInterest=" + areaOfInterest)
  		.then(function (response) {
  			if (response.data.length == 0) {
  				$scope.instructorsList = response.data;

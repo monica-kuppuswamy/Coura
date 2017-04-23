@@ -27,13 +27,13 @@
  		<div data-ng-controller="InstructorController" data-ng-init="listInstructors()">
    			<ul class="nav nav-tabs nav-justified">
       			<li></li>
-      			<li><a href ="/app/studenthome">Courses</a></li>
+      			<li><a href="/app/studenthome">Courses</a></li>
       			<li></li>
       			<li class="active"><a type="button" data-ng-click="listInstructors()">Instructors</a></li>
       			<li></li>
-      			<li><a href ="/app/mycourses">My Courses</a></li>
-      			<li></li>
-      			<li><a type="button" data-ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      			<li><a href="/app/mycourses">My Courses</a></li>
+				<li></li>
+      			<li><a href="/app/home"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
     		</ul>
       		<div class="frameContainer" layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>    		
       			<div class="panel panel-primary">	
@@ -48,18 +48,14 @@
                                     			<input class="form-control" type="text" data-ng-model="firstName" value="" />
                                   			</div>
                                   			<div class="form-group">
-                                    			<label for="contain">Last Number</label>
+                                    			<label for="contain">Last Name</label>
                                     			<input class="form-control" type="text" data-ng-model="lastName" value="" />
                                   			</div>
                                   			<div class="form-group">
-                                    			<label for="contain">Research Interest</label>
-                                    			<input class="form-control" type="text" data-ng-model="researchInterest" value="" />
+                                    			<label for="contain">Area of Interest</label>
+                                    			<input class="form-control" type="text" data-ng-model="areaOfInterest" value="" />
                                   			</div>
-                                  			<div class="form-group">
-                                    			<label for="contain">Course Name</label>
-                                    			<input class="form-control" type="text" data-ng-model="courseName" value="" />
-                                  			</div>
-                                  			<button type="submit" class="btn btn-primary" data-ng-click="searchInstructors()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                  					<button type="submit" class="btn btn-primary" data-ng-click="searchInstructors()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                 		</form>
                             		</div>
                         		</div>
@@ -79,7 +75,8 @@
               											<img alt="instructors" style="width: 100%" src="resources/images/instructor.jpg">
             										</div>
             										<div class="caption">
-              											<h5><b>{{instructor.firstName}} {{instructor.lastName}}</b></h5>
+              											<h6><b>{{instructor.firstName}}</b> <b>{{instructor.lastName}}</b></h6>
+              											
             										</div>
           										</div>
           									</a>

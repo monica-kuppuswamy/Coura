@@ -3,6 +3,7 @@ package com.coura.dao;
 import java.util.List;
 
 import com.coura.model.Course;
+import com.coura.model.Instructor;
 
 public interface CourseDao {
 	public Course findCourseByNumber(Integer courseId);
@@ -16,4 +17,6 @@ public interface CourseDao {
 	public List<Course> getCoursesForInstructor(Integer instructorId);
 	public List<Course> searchCourses(String courseNumber, String courseName, String areaOfInterest, String instructorName);
 	public List<Course> listMostRecentlySearchedCourses();
+	public List<Instructor> listAllInstructors();
+	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest);
 }

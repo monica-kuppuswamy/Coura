@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -329,4 +330,39 @@ public class CourseDaoImpl implements CourseDao {
 			x.subList(0,x.size()-4).clear();
 		return x;
 	}
+
+	@Override
+	public List<Instructor> listAllInstructors() {
+		// TODO Auto-generated method stub
+		Session session = this.sessionFactory.getCurrentSession();
+		SQLQuery query = session.createSQLQuery("select * from instructors");
+		query.addEntity(Instructor.class);
+		List<Instructor> instuctorList = query.list();
+		return instuctorList;
+	}
+
+	@Override
+	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest) {
+		
+		if (firstName.equalsIgnoreCase("undefined")) {
+			lastName = " ";
+		}
+		if (lastName.equalsIgnoreCase("undefined")) {
+			lastName = " ";
+		}
+		if (areaOfInterest.equalsIgnoreCase("undefined")) {
+			areaOfInterest = " ";
+		}
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		SQLQuery query = session.createSQLQuery("select * from instructors where firstname like :fname and lastname like :lname and research_interest like :researchinterest");
+		query.addEntity(Instructor.class);
+		query.setParameter("fname", firstName + "%");
+		query.setParameter("lname", lastName.trim() + "%");
+		query.setParameter("researchinterest", areaOfInterest.trim() + "%");
+		List<Instructor> instuctorList = query.list();
+		System.out.println("-----"+instuctorList.size());
+		return instuctorList;
+	}
+
 }
