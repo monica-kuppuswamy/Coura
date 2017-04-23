@@ -51,7 +51,7 @@
               									<img alt="courses" style="width: 100%" src="resources/images/course.jpg">
             								</div>
             								<div class="caption">
-              									<h4><b>{{course.courseName}}</b></h4>
+              									<h6><b>{{course.courseName}}</b></h6>
               									<p>{{course.courseNumber}}</p>
               									<button type="button" class="btn btn-success" data-ng-click="unEnrollCourse(course.id)">Unenroll</button>
             								</div>
