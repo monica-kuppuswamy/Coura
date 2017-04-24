@@ -11,14 +11,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.coura.dao.UsersDao;
+import com.coura.model.Course;
 import com.coura.model.Users;
 
 import net.minidev.json.JSONArray;
 
 @ContextConfiguration(locations = "classpath:Coura-servlet-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
+@Transactional
 public class UsersDaoTest {
 	
 	@Autowired
@@ -35,6 +38,14 @@ public class UsersDaoTest {
 		userDao.saveUsers(u1);
 		Users findUser = userDao.findUserByEmailId(u1.getEmailId());
 		assertEquals(findUser.getEmailId(), u1.getEmailId());
+	}
+	
+	@Test
+	@Rollback(true)
+	public void deleteCourseTest() {
+		List<Users> userList = userDao.listAllUsers();
+		userDao.deleteUser(userList.get(0).getEmailId());
+		assertFalse(userDao.isExistingEmailId(userList.get(0).getEmailId()));
 	}
 
 }
