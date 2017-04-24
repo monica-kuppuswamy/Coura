@@ -125,4 +125,10 @@ public class CourseServiceImpl implements CourseService {
 		return this.courseDao.searchInstructors(firstName, lastName, areaOfInterest);
 	}
 
+	@Override	
+	@Transactional
+	public List<Course> listRecommendedCourses(Integer courseId) {				
+		return this.courseDao.listRecommendedCourses(courseId);
+	}
+
 }

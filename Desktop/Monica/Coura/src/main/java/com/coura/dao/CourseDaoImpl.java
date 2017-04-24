@@ -384,5 +384,33 @@ public class CourseDaoImpl implements CourseDao {
 		System.out.println("-----"+instuctorList.size());
 		return instuctorList;
 	}
+	@Override
+	public List<Course> listRecommendedCourses(Integer courseId) {
+		
+		List<Course> rc=new ArrayList<Course>();
+		List<Course>rV=new ArrayList<Course>(mrsc);
+		String []areas={"Architecture","Programming","Software","Design","Network"};
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		Query query = session.createQuery("select c.id as id, c.courseNumber as courseNumber, c.courseName as courseName, c.prerequisite" + 
+				" as prerequisite, c.description as description from Course c").setResultTransformer(Transformers.aliasToBean(Course.class));
+		List<Course> courseList = query.list();
+		for (int k = 0; k < courseList.size(); k++) {
+			if (courseList.get(k).getId() == courseId) {
+				courseList.remove(k);
+			}
+		}
+		for(int i=0;i<rV.size();i++)
+			for(int j=0;j<areas.length;j++)
+				if(rV.get(i).getDescription().toLowerCase().contains(areas[j].toLowerCase()))	
+					for(int k=0;k<courseList.size()-1;k++)
+						if(courseList.get(k).getDescription().toLowerCase().contains(areas[j].toLowerCase()))
+							rc.add(courseList.get(k));
+
+		Set<Course> temp=new HashSet<Course>(rc);
+		List<Course> tEmP =new ArrayList<Course>(temp);
+
+		return tEmP;
+	}
 
 }
