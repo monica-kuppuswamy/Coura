@@ -21,4 +21,5 @@ public interface CourseDao {
 	public List<Course> listMostRecentlySearchedCourses();
 	public List<Instructor> listAllInstructors();
 	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest);
+	public List<Course> listRecommendedCourses(Integer courseId);	
 }

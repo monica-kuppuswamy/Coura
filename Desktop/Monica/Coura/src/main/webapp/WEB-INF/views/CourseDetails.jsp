@@ -149,5 +149,35 @@
 				</div>
 			</div>
 		</div>
+		
+		
+		
+				<b> &nbsp; &nbsp;Recommended Courses</b><br><br><br>
+		      	<div data-ng-controller="CourseController" data-ng-init="listRecommendedCourses()">
+					<div data-ng-show="error" class="alert alert-danger"><strong>Error: </strong>{{errorMessage}}</div>
+    					<div class="course-grids">
+   							<div class="container">
+   								<div class="row">
+      								<ul class="thumbnails list-unstyled">
+        								<li class="col-md-3" data-ng-repeat="course in coursesList">
+        									<a type="button" data-ng-click="getCourseDetails(course.courseNumber)">
+          										<div class="thumbnail" style="padding: 0">
+            										<div style="padding:5px">
+              											<img alt="courses" style="width:100%"src="resources/images/course.jpg">
+            										</div>
+            										<div class="caption">
+              											<h4 ><small><small><b>{{course.courseName}}</b></small></small></h4>
+              											<p>{{course.courseNumber}}</p><br>
+            										</div>
+          										</div>
+          									</a>
+        								</li>
+      								</ul>
+    							</div>
+							</div>
+						</div>
+					</div>    							
+						
+		
 	</body>
 </html>

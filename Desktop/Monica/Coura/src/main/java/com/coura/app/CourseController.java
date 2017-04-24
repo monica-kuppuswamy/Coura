@@ -139,4 +139,15 @@ public @ResponseBody ResponseEntity<List<Instructor>> searchInstructors(@Request
 	List<Instructor> instructor = this.courseService.searchInstructors(firstName, lastName, areaOfInterest);
 	return new ResponseEntity<List<Instructor>>(instructor, HttpStatus.OK);
 }
+
+
+@RequestMapping(
+		value="getRecommendedCourses/{courseId}",
+		method=RequestMethod.GET,
+		produces=MediaType.APPLICATION_JSON_VALUE)
+public @ResponseBody ResponseEntity<List<Course>> listRecommendedCourses(@PathVariable Integer courseId){
+	List<Course> course=this.courseService.listRecommendedCourses(courseId);
+	return new ResponseEntity<List<Course>>(course,HttpStatus.OK);
+}
+
 }

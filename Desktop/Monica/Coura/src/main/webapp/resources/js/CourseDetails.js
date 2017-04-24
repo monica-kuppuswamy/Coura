@@ -128,3 +128,27 @@ app.controller('RatingController', ['$scope', '$cookies', '$http', function ($sc
         });
 	}
 }]);
+
+app.controller('CourseController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies){
+	$scope.error = false;
+	$scope.listRecommendedCourses = function () {
+		//alert('Inside recommended courses');	
+		$scope.error = false;
+
+		$http.get("/app/courseservice/getRecommendedCourses/" + window.location.search.split('=')[1])
+		.then(function (response){
+				//alert('Inside Response');
+			//alert(JSON.stringify(response.data));
+			$scope.coursesList = response.data;
+		}); 
+	}
+
+	$scope.getCourseDetails = function (courseNumber) {
+		alert('inside getcorsedetails');
+		$http.get("/app/courseservice/getcourseId/" + courseNumber)
+ 		.then(function (response){
+ 			var courseId = response.data;
+ 			window.location.href = "/app/coursedetails?id=" + courseId;
+ 		});
+	}
+}]);
