@@ -26,9 +26,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.coura.app.SignupController;
-import com.coura.model.Users;
-import com.coura.service.UsersService;
+import com.coura.app.ReviewController;
+import com.coura.model.CourseReview;
+import com.coura.service.ReviewService;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -36,77 +36,81 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  
 @ContextConfiguration(locations = "classpath:Coura-servlet-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
-public class SignupControllerTest {
+public class ReviewControllerTest {
 
 	private MockMvc mockMvc;
 	
 	@Autowired
 	@InjectMocks
-	private SignupController signupController;
+	private ReviewController reviewController;
 	
     @Mock
-    private UsersService userService;
+    private ReviewService reviewService;
  
     @Before
     public void setUp() {
         
     	MockitoAnnotations.initMocks(this);
-        this.mockMvc = MockMvcBuilders.standaloneSetup(signupController).build();
+        this.mockMvc = MockMvcBuilders.standaloneSetup(reviewController).build();
     }
     
     @Test
-    public void testGetUsers() throws Exception {
+    public void testGetCourseReviewedByUser() throws Exception {
+    	
+    	List<Integer> cIds = new ArrayList<Integer>();
+        cIds.add(1);
+        cIds.add(2);
+        
+        when(reviewService.courseReviewedByUser("user@uncc.edu")).thenReturn(cIds);
+ 
+        mockMvc.perform(get("/reviewservice/getcoursereviewed/{id}", "user@uncc.edu"))
+        .andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE));
+ 		
+        verify(reviewService, times(1)).courseReviewedByUser("user@uncc.edu");
+        verifyNoMoreInteractions(reviewService);
+    }
     
-    	Users user1 = new Users("user1@uncc.edu","Mark","Zuck","password1");
-    	Users user2 = new Users("user2@uncc.edu","Sofia","Peters","password2");
+    @Test
+    public void testGetCourseReview() throws Exception {
     	
-    	List<Users> list = new ArrayList<Users>();
-    	list.add(user1);
-    	list.add(user2);
+    	CourseReview cr = new CourseReview();
+    	cr.setCourseId(1);
+    	cr.setUserEmailId("user@uncc.edu");
+    	cr.setReview("Good course");
     	
-    	when(userService.listAllUsers()).thenReturn(list);
+    	List<CourseReview> list = new ArrayList<CourseReview>();
+    	list.add(cr);
+    	
+    	when(reviewService.getCourseReviews(1)).thenReturn(list);
     	 
-        mockMvc.perform(get("/signupservices/getusers"))
+        mockMvc.perform(get("/reviewservice/getreview/{courseId}", 1))
         .andExpect(status().isOk())
         .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
-        .andExpect(jsonPath("$", hasSize(2)))
-        .andExpect(jsonPath("$[0].emailId", is("user1@uncc.edu")))
-        .andExpect(jsonPath("$[0].firstName", is("Mark")))
-        .andExpect(jsonPath("$[0].lastName", is("Zuck")))
-        .andExpect(jsonPath("$[0].password", is("password1")))
-        .andExpect(jsonPath("$[1].emailId", is("user2@uncc.edu")))
-        .andExpect(jsonPath("$[1].firstName", is("Sofia")))
-        .andExpect(jsonPath("$[1].lastName", is("Peters")))
-        .andExpect(jsonPath("$[1].password", is("password2")));
-        
-        verify(userService, times(1)).listAllUsers();
-        verifyNoMoreInteractions(userService);
+        .andExpect(jsonPath("$", hasSize(1)))
+        .andExpect(jsonPath("$[0].courseId", is(1)))
+        .andExpect(jsonPath("$[0].userEmailId", is("user@uncc.edu")))
+        .andExpect(jsonPath("$[0].review", is("Good course")));
+    	
+        verify(reviewService, times(1)).getCourseReviews(1);
+        verifyNoMoreInteractions(reviewService);
     }
     
     @Test
-    public void testSaveUser() throws Exception {
+    public void testInsertRating() throws Exception {
     	
-    	Users user = new Users("user1@uncc.edu","Mark","Zuck","password1");
+    	CourseReview cr = new CourseReview();
+    	cr.setCourseId(1);
+    	cr.setUserEmailId("user@uncc.edu");
+    	cr.setReview("Good course");
     	
-    	when(userService.saveUsers(user)).thenReturn(true);
+    	doNothing().when(reviewService);
     	
-    	mockMvc.perform(post("/signupservices/saveuser").contentType(MediaType.APPLICATION_JSON).content(mapToJson(user)))
-        .andExpect(content().contentType(MediaType.TEXT_PLAIN_VALUE));
-        
-        verify(userService, times(1)).saveUsers(user);
-        verifyNoMoreInteractions(userService);
-    }
-    
-    @Test
-    public void testDeleteUser() throws Exception {
-        
-    	doNothing().when(userService);
+    	mockMvc.perform(post("/reviewservice/insertrating").content(mapToJson(cr)))
+    	.andExpect(status().isCreated());
     	
-        mockMvc.perform(get("/signupservices/deleteuser/{emailId}", "user@uncc.edu"))
-        .andExpect(status().isOk());
-        
-        verify(userService, times(1)).deleteUser("user@uncc.edu");
-        verifyNoMoreInteractions(userService);
+        verify(reviewService, times(1)).insertCourseReview(cr);
+        verifyNoMoreInteractions(reviewService);
     }
     
     protected String mapToJson(Object obj) throws JsonProcessingException {
