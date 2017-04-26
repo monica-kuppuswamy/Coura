@@ -68,15 +68,14 @@
    							<div class="container">
    								<div class="row">
       								<ul class="thumbnails list-unstyled">
-        								<li class="col-md-3" data-ng-repeat="instructor in instructorsList">
+        								<li class="col-md-3" data-ng-repeat="instructor in instructorsList | filter: searchFor | startFrom:currentPage*pageSize | limitTo:pageSize">
         									<a type="button" data-ng-click="getInstructorDetails(instructor.emailId)">
           										<div class="thumbnail" style="padding: 0">
             										<div style="padding:5px">
-              											<img alt="instructors" style="width: 100%" src="resources/images/instructor.jpg">
+              											<img alt="instructors" style="width: 100%" src="resources/images/teachers.png">
             										</div>
             										<div class="caption">
               											<h6><b>{{instructor.firstName}}</b> <b>{{instructor.lastName}}</b></h6>
-              											
             										</div>
           										</div>
           									</a>
@@ -85,6 +84,13 @@
     							</div>
 							</div>
 						</div>
+						<br>
+						<div class="table-pagination">
+							<button class="btn btn-success btn-md" data-ng-disabled="currentPage == 0" data-ng-click="currentPage=currentPage-1">{{Previous}}</button>
+    						{{currentPage + 1}}/{{numberOfPages()}}
+    						<button class="btn btn-success btn-md" data-ng-disabled="currentPage >= getData().length / pageSize - 1" data-ng-click="currentPage = currentPage + 1">{{Next}}</button>
+						</div>
+						<br>
 					</div>
 				</div>
      		</div> 

@@ -355,8 +355,7 @@ public class CourseDaoImpl implements CourseDao {
 	public List<Instructor> listAllInstructors() {
 		// TODO Auto-generated method stub
 		Session session = this.sessionFactory.getCurrentSession();
-		SQLQuery query = session.createSQLQuery("select * from instructors");
-		query.addEntity(Instructor.class);
+		Query query = session.createQuery("select i.id as id, i.firstName as firstName, i.lastName as lastName, i.emailId as emailId, i.researchInterest as researchInterest from Instructor i").setResultTransformer(Transformers.aliasToBean(Instructor.class));
 		List<Instructor> instuctorList = query.list();
 		return instuctorList;
 	}
@@ -365,7 +364,7 @@ public class CourseDaoImpl implements CourseDao {
 	public List<Instructor> searchInstructors(String firstName, String lastName, String areaOfInterest) {
 		
 		if (firstName.equalsIgnoreCase("undefined")) {
-			lastName = " ";
+			firstName = " ";
 		}
 		if (lastName.equalsIgnoreCase("undefined")) {
 			lastName = " ";
@@ -373,17 +372,17 @@ public class CourseDaoImpl implements CourseDao {
 		if (areaOfInterest.equalsIgnoreCase("undefined")) {
 			areaOfInterest = " ";
 		}
-		
 		Session session = this.sessionFactory.getCurrentSession();
-		SQLQuery query = session.createSQLQuery("select * from instructors where firstname like :fname and lastname like :lname and research_interest like :researchinterest");
-		query.addEntity(Instructor.class);
-		query.setParameter("fname", firstName + "%");
+		Query query = session.createQuery("select i.id as id, i.firstName as firstName, i.lastName as lastName, i.emailId as emailId, " + 
+				"i.researchInterest as researchInterest from Instructor i where i.firstName like :fname and i.lastName like :lname and " + 
+				"i.researchInterest like :researchinterest").setResultTransformer(Transformers.aliasToBean(Instructor.class));
+		query.setParameter("fname", firstName.trim() + "%");
 		query.setParameter("lname", lastName.trim() + "%");
 		query.setParameter("researchinterest", areaOfInterest.trim() + "%");
 		List<Instructor> instuctorList = query.list();
-		System.out.println("-----"+instuctorList.size());
 		return instuctorList;
 	}
+	
 	@Override
 	public List<Course> listRecommendedCourses(Integer courseId) {
 		

@@ -1,5 +1,19 @@
 var app = angular.module('couraApplication', ['ngMaterial', 'ngCookies']);
-app.controller('InstructorController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {   	
+app.controller('InstructorController', ['$scope', '$http', '$filter', '$cookies', function ($scope, $http, $filter, $cookies) {
+	
+	$scope.Previous = "<<";
+	$scope.Next = ">>";
+	$scope.currentPage = 0;
+	$scope.pageSize = 8;
+	
+	$scope.getData = function () {
+		return $filter('filter')($scope.instructorsList, '');
+	}
+        	 
+	$scope.numberOfPages = function () {
+		return Math.ceil($scope.getData().length/$scope.pageSize);                
+	}
+	
 	$scope.error = false;
 	$scope.listInstructors = function () {
 		$scope.error = false;
@@ -43,3 +57,9 @@ app.controller('InstructorController', ['$scope', '$http', '$cookies', function 
 		});
 	}
 }]);
+app.filter('startFrom', function() {
+	return function(input, start) {
+        start = +start; //parse to int
+        return input.slice(start);
+    }
+});

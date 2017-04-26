@@ -98,9 +98,8 @@
 					<div class="container">
 						<div class="row">
 							<ul class="thumbnails list-unstyled">
-								<li class="col-md-3" data-ng-repeat="course in coursesList">
-									<a type="button"
-									data-ng-click="getCourseDetails(course.courseNumber)">
+								<li class="col-md-3" data-ng-repeat="course in coursesList | filter: searchFor | startFrom:currentPage*pageSize | limitTo:pageSize">
+									<a type="button" data-ng-click="getCourseDetails(course.courseNumber)">
 										<div class="thumbnail" style="padding: 0">
 											<div style="padding: 5px">
 												<img alt="courses" style="width: 100%"
@@ -113,16 +112,22 @@
 												<p>{{course.courseNumber}}</p>
 											</div>
 										</div>
-								</a>
+									</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
+				<br>
+				<div class="table-pagination">
+					<button class="btn btn-success btn-md" data-ng-disabled="currentPage == 0" data-ng-click="currentPage=currentPage-1">{{Previous}}</button>
+    				{{currentPage + 1}}/{{numberOfPages()}}
+    				<button class="btn btn-success btn-md" data-ng-disabled="currentPage >= getData().length / pageSize - 1" data-ng-click="currentPage = currentPage + 1">{{Next}}</button>
+				</div>
+				<br>
 			</div>
 			<b>Recently Viewed Courses</b>
-			<div data-ng-controller="CourseController"
-				data-ng-init="listMostRecentSearchedCourses()">
+			<div data-ng-controller="CourseController" data-ng-init="listMostRecentSearchedCourses()">
 				<div data-ng-show="error" class="alert alert-danger">
 					<strong>Error: </strong>{{errorMessage}}
 				</div>
@@ -131,8 +136,7 @@
 						<div class="row">
 							<ul class="thumbnails list-unstyled">
 								<li class="col-md-3" data-ng-repeat="course in coursesList">
-									<a type="button"
-									data-ng-click="getCourseDetails(course.courseNumber)">
+									<a type="button" data-ng-click="getCourseDetails(course.courseNumber)">
 										<div class="thumbnail" style="padding: 0">
 											<div style="padding: 5px">
 												<img alt="courses" style="width: 100%"
@@ -145,7 +149,7 @@
 												<p>{{course.courseNumber}}</p>
 											</div>
 										</div>
-								</a>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -154,7 +158,5 @@
 			</div>
 		</div>
 	</div>
-
-
 </body>
 </html>
