@@ -154,7 +154,7 @@
   						
     						<label>Course Number:</label>
   							<input type="text" class="form-control" name="courseNumber" data-ng-model="courseNumber" placeholder="Course Number" required/>
-  							<span style="color:red" data-ng-show="addInstructorForm.number.$touched && addInstructorForm.number.$invalid">This is a required field</span>
+  							<span style="color:red" data-ng-show="addInstructorForm.courseNumber.$touched && addInstructorForm.courseNumber.$invalid">This is a required field</span>
   							<br>
   						
   							<label>Prerequisite:</label>

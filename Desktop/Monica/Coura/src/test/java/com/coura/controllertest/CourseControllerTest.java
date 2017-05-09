@@ -138,9 +138,7 @@ public class CourseControllerTest {
     @Test
     public void testDeleteCourse() throws Exception {
         
-    	doNothing().when(courseService);
-    	
-        mockMvc.perform(get("/courseservice/deletecourse/{courseId}", 1))
+        mockMvc.perform(delete("/courseservice/deletecourse/{courseId}", 1))
         .andExpect(status().isOk());
         
         verify(courseService, times(1)).deleteCourse(1);

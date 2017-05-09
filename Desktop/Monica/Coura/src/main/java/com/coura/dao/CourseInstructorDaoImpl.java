@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.coura.model.CourseInstructor;
 import com.coura.model.Users;
 
-public class CourseInstructorDaoImpl {
+public class CourseInstructorDaoImpl implements CourseInstructorDao {
 	
 	private static final Logger logger = LoggerFactory.getLogger(CourseInstructorDaoImpl.class);
 

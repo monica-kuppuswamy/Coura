@@ -54,7 +54,7 @@
                                     			<input class="form-control" type="text" data-ng-model="lastName" value="" />
                                   			</div>
                                   			<div class="form-group">
-                                    			<label for="contain">Area of Interest</label>
+                                    			<label for="contain">Research Interest</label>
                                     			<input class="form-control" type="text" data-ng-model="areaOfInterest" value="" />
                                   			</div>
                                   					<button type="submit" class="btn btn-primary" data-ng-click="searchInstructors()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>

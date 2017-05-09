@@ -37,7 +37,7 @@ app.controller('InstructorController', ['$scope', '$http', '$filter', '$cookies'
  				};
  				var res = $http.post('/app/instructorservice/addinstructor', instructorDetails);
  		    	res.success(function(data, status, headers, config) {
- 		    		alert(data);
+ 		    		
  		    		if (data.includes("Instructor Added Successfully")) {
  		    			$scope.success = true;
  		    			$scope.successMessage = data;
@@ -101,6 +101,7 @@ app.controller('InstructorController', ['$scope', '$http', '$filter', '$cookies'
     	var res = $http.post('/app/instructorservice/updateinstructor', instructorDetails);
     	res.success(function(data, status, headers, config) {
     		if (data.includes("successfully updated")) {
+    			window.location.reload();
     			$scope.success = true;
     			$scope.successMessage = data;
     		} else {
