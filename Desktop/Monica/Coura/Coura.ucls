@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.0" icons="true" automaticImage="JPEG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.coura.app.CourseController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/CourseController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-122" y="1547"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="com.coura.service.CourseService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/CourseService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-122" y="1961"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="com.coura.app.HomeController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/HomeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3748" y="2449"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.coura.app.InstructorController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/InstructorController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1778" y="172"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="com.coura.service.InstructorService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/InstructorService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1774" y="497"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="com.coura.app.InstructorRatingController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/InstructorRatingController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4634" y="3012"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" language="java" name="com.coura.service.InstructorRatingService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/InstructorRatingService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4634" y="3253"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="com.coura.app.InstructorReviewController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/InstructorReviewController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4195" y="162"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" language="java" name="com.coura.service.InstructorReviewService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/InstructorReviewService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4194" y="385"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" language="java" name="com.coura.app.LoginController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/LoginController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3585" y="133"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="com.coura.service.LoginService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/LoginService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3578" y="293"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="12" language="java" name="com.coura.app.RatingController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/RatingController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3174" y="2988"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="com.coura.service.RatingService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/RatingService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3174" y="3197"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="com.coura.app.RegistrationController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/RegistrationController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1483" y="3443"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" language="java" name="com.coura.service.RegistrationService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/RegistrationService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1482" y="3658"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" language="java" name="com.coura.app.ReviewController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/ReviewController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5444" y="386"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="17" language="java" name="com.coura.service.ReviewService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/ReviewService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5445" y="604"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="18" language="java" name="com.coura.app.SignupController" project="Coura" 
+    file="/Coura/src/main/java/com/coura/app/SignupController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5246" y="1868"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="com.coura.service.UsersService" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/UsersService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5243" y="2098"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="com.coura.service.CourseServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/CourseServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-118" y="2446"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="com.coura.service.InstructorServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/InstructorServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1777" y="840"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="com.coura.service.InstructorRatingServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/InstructorRatingServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4636" y="3474"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.coura.service.InstructorReviewServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/InstructorReviewServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4192" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.coura.service.LoginServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/LoginServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3577" y="455"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="com.coura.service.RatingServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/RatingServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3176" y="3406"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="com.coura.service.RegistrationServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/RegistrationServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1477" y="3873"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="com.coura.service.ReviewServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/ReviewServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5445" y="823"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="com.coura.service.UsersServiceImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/service/UsersServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5238" y="2352"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="29" language="java" name="com.coura.dao.CourseDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/CourseDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-115" y="2890"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="30" language="java" name="com.coura.dao.InstructorDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/InstructorDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1782" y="1234"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="31" language="java" name="com.coura.dao.InstructorRatingDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/InstructorRatingDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4637" y="3679"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="32" language="java" name="com.coura.dao.InstructorReviewDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/InstructorReviewDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4194" y="815"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="33" language="java" name="com.coura.dao.LoginDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/LoginDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3576" y="642"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="34" language="java" name="com.coura.dao.RatingDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/RatingDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3173" y="3635"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="35" language="java" name="com.coura.dao.RegistrationDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/RegistrationDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1474" y="4089"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="36" language="java" name="com.coura.dao.ReviewDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/ReviewDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5446" y="1056"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="37" language="java" name="com.coura.dao.UsersDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/UsersDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5236" y="2594"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="38" language="java" name="com.coura.dao.CourseDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/CourseDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="72" y="3678"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="com.coura.dao.InstructorDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/InstructorDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1786" y="1608"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="com.coura.dao.InstructorRatingDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/InstructorRatingDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4635" y="4201"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="com.coura.dao.InstructorReviewDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/InstructorReviewDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4191" y="1114"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="com.coura.dao.LoginDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/LoginDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3576" y="917"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="com.coura.dao.RatingDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/RatingDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3172" y="4158"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="com.coura.dao.RegistrationDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/RegistrationDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1475" y="4367"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="com.coura.dao.ReviewDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/ReviewDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5443" y="1394"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="com.coura.dao.UsersDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/UsersDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5235" y="2864"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="47" language="java" name="com.coura.dao.CourseInstructorDao" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/CourseInstructorDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4318" y="1508"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="48" language="java" name="com.coura.dao.CourseInstructorDaoImpl" project="Coura" 
+    file="/Coura/src/main/java/com/coura/dao/CourseInstructorDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4319" y="1693"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="com.coura.model.Course" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/Course.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2979" y="2085"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="com.coura.model.CourseInstructor" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/CourseInstructor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3499" y="1753"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="com.coura.model.CourseInstructorWrapper" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/CourseInstructorWrapper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2979" y="826"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="com.coura.model.CourseRating" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/CourseRating.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3931" y="3078"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="com.coura.model.CourseReview" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/CourseReview.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4839" y="1046"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="com.coura.model.Instructor" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/Instructor.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1012" y="1211"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="com.coura.model.InstructorRating" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/InstructorRating.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5598" y="3366"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="com.coura.model.InstructorReview" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/InstructorReview.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4706" y="225"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="com.coura.model.StudentCourse" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/StudentCourse.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2713" y="4006"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="com.coura.model.Users" project="Coura" 
+    file="/Coura/src/main/java/com/coura/model/Users.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4439" y="2186"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="52"/>  
+  </dependency>  
+  <dependency id="60">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="61">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="58"/>  
+  </dependency>  
+  <dependency id="62">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="53"/>  
+  </dependency>  
+  <dependency id="64">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="51"/>  
+  </dependency>  
+  <association id="65">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="66" name="userDao"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="68">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="69">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <dependency id="70">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="57"/>  
+  </dependency>  
+  <association id="71">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="72" name="instructorService"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="75" name="courseService"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="77">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <dependency id="78">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <association id="79">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="80" name="instructor"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="54" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="82">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <dependency id="83">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <dependency id="84">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="58"/>  
+  </dependency>  
+  <dependency id="85">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="56"/>  
+  </dependency>  
+  <dependency id="86">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="87">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="53"/>  
+  </dependency>  
+  <dependency id="88">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="57"/>  
+  </dependency>  
+  <realization id="89">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="47"/>  
+  </realization>  
+  <realization id="90">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <association id="91">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="92" name="instructorRatingDao"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="94">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <realization id="95">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <dependency id="96">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="58"/>  
+  </dependency>  
+  <dependency id="97">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="98">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="53"/>  
+  </dependency>  
+  <dependency id="99">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="51"/>  
+  </dependency>  
+  <dependency id="100">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="56"/>  
+  </dependency>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="43"/>  
+  </dependency>  
+  <dependency id="102">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <dependency id="103">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <association id="104">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="105" name="instructorDao"/>      
+      <multiplicity id="106" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="107">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="108">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="51"/>  
+  </dependency>  
+  <association id="109">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="110" name="reviewService"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="112">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <dependency id="113">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="53"/>  
+  </dependency>  
+  <realization id="114">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="37"/>  
+  </realization>  
+  <association id="115">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="116" name="userService"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="118">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="119">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="57"/>  
+  </dependency>  
+  <realization id="120">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="31"/>  
+  </realization>  
+  <dependency id="121">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="57"/>  
+  </dependency>  
+  <association id="122">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="123" name="registrationService"/>      
+      <multiplicity id="124" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="125">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="50"/>  
+  </dependency>  
+  <dependency id="126">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="52"/>  
+  </dependency>  
+  <association id="127">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="128" name="mrsc"/>      
+      <multiplicity id="129" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="49" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="130">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="131" name="ratingDao"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="34" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="133">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <realization id="134">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="36"/>  
+  </realization>  
+  <dependency id="135">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="52"/>  
+  </dependency>  
+  <dependency id="136">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="56"/>  
+  </dependency>  
+  <dependency id="137">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <association id="138">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="139" name="instructorRatingService"/>      
+      <multiplicity id="140" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="141">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="52"/>  
+  </dependency>  
+  <dependency id="142">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="52"/>  
+  </dependency>  
+  <realization id="143">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <dependency id="144">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <realization id="145">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="30"/>  
+  </realization>  
+  <association id="146">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="147" name="reviewDao"/>      
+      <multiplicity id="148" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="149">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <dependency id="150">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="50"/>  
+  </dependency>  
+  <association id="151">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="152" name="courseInstructor"/>      
+      <multiplicity id="153" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="154">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="58"/>  
+  </dependency>  
+  <realization id="155">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <realization id="156">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="32"/>  
+  </realization>  
+  <dependency id="157">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="58"/>  
+  </dependency>  
+  <realization id="158">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <dependency id="159">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <dependency id="160">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="50"/>  
+  </dependency>  
+  <dependency id="161">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="56"/>  
+  </dependency>  
+  <realization id="162">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <dependency id="163">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <association id="164">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="165" name="ratingService"/>      
+      <multiplicity id="166" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="167">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="57"/>  
+  </dependency>  
+  <dependency id="168">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <association id="169">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="170" name="loginDao"/>      
+      <multiplicity id="171" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="172">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="173">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <realization id="174">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <dependency id="175">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="53"/>  
+  </dependency>  
+  <association id="176">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="177" name="registrationDao"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="179">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="17"/>  
+  </realization>  
+  <dependency id="180">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="45"/>  
+  </dependency>  
+  <dependency id="181">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="182">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="53"/>  
+  </dependency>  
+  <realization id="183">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="34"/>  
+  </realization>  
+  <association id="184">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="185" name="instructorReviewService"/>      
+      <multiplicity id="186" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="187">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="188">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="189" name="courseDao"/>      
+      <multiplicity id="190" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="191">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <association id="192">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="193" name="instructorDao"/>      
+      <multiplicity id="194" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="195">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="49"/>  
+  </dependency>  
+  <dependency id="196">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <dependency id="197">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <association id="198">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="199" name="instructorReviewDao"/>      
+      <multiplicity id="200" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="201">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <dependency id="202">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="52"/>  
+  </dependency>  
+  <dependency id="203">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="56"/>  
+  </dependency>  
+  <realization id="204">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="29"/>  
+  </realization>  
+  <dependency id="205">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="51"/>  
+  </dependency>  
+  <dependency id="206">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="51"/>  
+  </dependency>  
+  <association id="207">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="208" name="loginService"/>      
+      <multiplicity id="209" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
