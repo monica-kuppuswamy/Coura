@@ -18,6 +18,15 @@ public class Instructor {
 	@Column(name = "id")
 	private Integer id;
 	
+	public Instructor(Integer id, String firstName, String lastName, String emailId, String researchInterest) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.emailId = emailId;
+		this.researchInterest = researchInterest;
+	}
+
 	@Column(name = "firstname")
 	private String firstName;
 	

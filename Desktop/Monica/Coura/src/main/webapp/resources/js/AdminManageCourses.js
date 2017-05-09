@@ -27,7 +27,6 @@ app.controller('CourseController', ['$scope', '$http', '$filter', '$cookies', fu
  				};
  				var res = $http.post('/app/courseservice/savecourse', course);
  		    	res.success(function(data, status, headers, config) {
- 		    		alert(data);
  		    		if (data.includes("successfully updated.")) {
  		    			$scope.success = true;
  		    			$scope.successMessage = data;
@@ -71,6 +70,7 @@ app.controller('CourseController', ['$scope', '$http', '$filter', '$cookies', fu
 	
 	$scope.confirmEdition = function() {
 		
+		alert('hi');
 		// Hide failure or success message
        	$scope.error = false;
        	$scope.success = false;
@@ -83,9 +83,12 @@ app.controller('CourseController', ['$scope', '$http', '$filter', '$cookies', fu
     		description: $scope.description
     	};
     	
+    	alert(courseDetails);
+    	
     	var res = $http.post('/app/courseservice/updatecourse', courseDetails);
     	res.success(function(data, status, headers, config) {
-    		if (data.includes("successfully updated")) {
+    		alert(data);
+    		if (data.includes("successfully updated.")) {
     			$scope.success = true;
     			$scope.successMessage = data;
     		} else {

@@ -100,6 +100,7 @@ app.controller('RatingController', ['$scope', '$cookies', '$http', function ($sc
     	}
     	var res = $http.post('/app/ratingservice/insertrating', rating);
     	res.success(function(data, status, headers, config) {
+    		window.location.reload();
     		$scope.success = true;
     		$scope.successMessage = "Your rating has been recorded.";
     	});
@@ -131,14 +132,11 @@ app.controller('RatingController', ['$scope', '$cookies', '$http', function ($sc
 
 app.controller('CourseController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies){
 	$scope.error = false;
-	$scope.listRecommendedCourses = function () {
-		//alert('Inside recommended courses');	
+	$scope.listRecommendedCourses = function () {	
 		$scope.error = false;
 
 		$http.get("/app/courseservice/getRecommendedCourses/" + window.location.search.split('=')[1])
 		.then(function (response){
-				//alert('Inside Response');
-			//alert(JSON.stringify(response.data));
 			$scope.coursesList = response.data;
 		}); 
 	}

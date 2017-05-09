@@ -87,6 +87,10 @@ public class UsersDaoImpl implements UsersDao {
 		query5.setParameter("emailID", emailId+"%");
 		query5.executeUpdate();
 		
+		Query query6 = session.createQuery("delete from StudentCourse where userEmailId like :emailID");
+		query6.setParameter("emailID", emailId+"%");
+		query6.executeUpdate();
+		
 		Query query4 = session.createQuery("delete Users where emailId like :emailID");
 		query4.setParameter("emailID", emailId+"%");
 		query4.executeUpdate();

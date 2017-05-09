@@ -34,6 +34,14 @@
            	<li></li>
       	   	<li><a type="button" data-ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
      	</ul>
+     	<div data-ng-show="success" class="alert alert-success alert-dismissable">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			{{successMessage}}
+		</div>
+        <div data-ng-show="error" class="alert alert-danger alert-dismissable">
+        	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        	<strong>Error: </strong>{{errorMessage}}
+        </div>
       	<div class="frameContainer" layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>	
          	<div class="panel panel-primary" id="panel-one">
     	 		<div class="panel-heading">List Of Courses</div>
@@ -124,7 +132,7 @@
                    			<h4 class="modal-title custom_align" id="Heading">Delete this entry?</h4>
                 		</div>
                 		<div class="modal-body">
-                    		<div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+                    		<div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Course?</div>
                 		</div>
                 		<div class="modal-footer ">
                     		<button type="button" class="btn btn-success" data-dismiss="modal" data-ng-click="confirmDeletion()"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>

@@ -96,7 +96,7 @@
         				<h4 class="modal-title custom_align" id="Heading">Delete this entry?</h4>
       				</div>
           			<div class="modal-body">
-       					<div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+       					<div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this User?</div>
        				</div>
         			<div class="modal-footer ">
         				<button type="button" class="btn btn-success" data-dismiss="modal" data-ng-click="confirmDeletion()"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>

@@ -62,12 +62,8 @@ public class CourseServiceImpl implements CourseService {
 	@Override
 	@Transactional
 	public boolean updateCourse(Course course) {
-		if (this.isExistingCourse(course.getCourseNumber())) {
-			return false;
-		} else {
-			this.courseDao.updateCourse(course);
-			return true;
-		}
+		this.courseDao.updateCourse(course);
+		return true;
 	}
 	
 	@Override

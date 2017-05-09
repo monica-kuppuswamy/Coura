@@ -33,7 +33,8 @@
       			<li></li>
       			<li><a href="/app/mycourses">My Courses</a></li>
 				<li></li>
-      			<li><a href="/app/home"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      			<li><a type="button" data-ng-click="logout()"><span
+					class="glyphicon glyphicon-log-out"></span> Log out</a></li>
     		</ul>
       		<div class="frameContainer" layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>    		
       			<div class="panel panel-primary">	

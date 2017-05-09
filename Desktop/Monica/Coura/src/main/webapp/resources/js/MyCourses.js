@@ -21,4 +21,10 @@ app.controller('MyCourseController', ['$scope', '$http', '$cookies', function ($
 		}).error(function(data, status, headers, config) {
 		});
 	}
+	
+	$scope.logout = function () {
+		$http.get("/app/loginservice/logout").then(function (response) {
+			window.location.href = "/app/login";
+		});
+	}
 }]);

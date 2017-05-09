@@ -91,6 +91,12 @@ public class InstructorDaoImpl implements InstructorDao {
 		query3.executeUpdate();
 		session.flush();
 		session.clear();
+		
+		Query query5 = session.createQuery("delete from StudentCourse where instructorId = :instructorId");
+		query5.setParameter("instructorId", instructorId);
+		query5.executeUpdate();
+		session.flush();
+		session.clear();
 			
 		// Delete from course table
 		Query query4 = session.createQuery("delete from Instructor where id = :instructorId");

@@ -127,6 +127,12 @@ public class CourseDaoImpl implements CourseDao {
 			query2.executeUpdate();
 			session.flush();
 			session.clear();
+			
+			Query query6 = session.createQuery("delete from StudentCourse where courseId = :courseId");
+			query6.setParameter("courseId", course.getId());
+			query6.executeUpdate();
+			session.flush();
+			session.clear();
 				
 			// Delete from course table
 			Query query3 = session.createQuery("delete from Course where id = :courseId");
@@ -341,6 +347,7 @@ public class CourseDaoImpl implements CourseDao {
 		return course;
 		
 	}
+	
 	@Override
 	public List<Course> listMostRecentlySearchedCourses() {
 		

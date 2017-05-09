@@ -170,6 +170,7 @@ app.controller('RatingController', ['$scope', '$cookies', '$http', 'sharedProper
 
     	var res = $http.post('/app/instructorratingservice/insertrating', rating);
     	res.success(function(data, status, headers, config) {
+    		window.location.reload();
     		$scope.success = true;
     		$scope.successMessage = "Your rating has been recorded.";
     	});
