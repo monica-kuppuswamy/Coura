@@ -36,6 +36,7 @@
 		</div>
 	</div>
 	<div data-ng-controller="CourseController" data-ng-init="listCourses()">
+		<div><center>Welcome {{welcomeUserName}}</center></div>
 		<ul class="nav nav-tabs nav-justified">
 			<li></li>
 			<li class="active"><a type="button"

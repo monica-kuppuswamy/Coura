@@ -1,5 +1,5 @@
 var app = angular.module('couraApplication', ['ngMaterial', 'ngCookies']);
-app.controller('MyCourseController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) { 
+app.controller('MyCourseController', ['$scope', '$http', '$cookies', function ($scope, $http, $cookies) {
 	$scope.error = false;
 	$scope.listMyCourses = function () {
 		$scope.error = false;
@@ -11,7 +11,6 @@ app.controller('MyCourseController', ['$scope', '$http', '$cookies', function ($
      			}
      	}); 
 	}
-	
 	$scope.unEnrollCourse = function (courseId) {
 		$http({
 			method : 'DELETE',

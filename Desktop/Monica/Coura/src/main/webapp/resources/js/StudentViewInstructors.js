@@ -1,6 +1,7 @@
 var app = angular.module('couraApplication', ['ngMaterial', 'ngCookies']);
 app.controller('InstructorController', ['$scope', '$http', '$filter', '$cookies', function ($scope, $http, $filter, $cookies) {
 	
+	$scope.welcomeUserName = $cookies.get('username');
 	$scope.Previous = "<<";
 	$scope.Next = ">>";
 	$scope.currentPage = 0;

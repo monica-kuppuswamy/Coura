@@ -25,6 +25,7 @@
   			</div>
 		</div>
  		<div data-ng-controller="InstructorController" data-ng-init="listInstructors()">
+ 		<div><center>Welcome {{welcomeUserName}}</center></div>
    			<ul class="nav nav-tabs nav-justified">
       			<li></li>
       			<li><a href="/app/studenthome">Courses</a></li>
